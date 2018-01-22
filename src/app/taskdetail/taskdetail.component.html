@@ -1,0 +1,35 @@
+<div class="taskdetail">
+<form>
+  <!-- <fieldset class="field"> -->
+   <b>Task Details</b><br>
+<label>Title:</label><br>
+<input type="textbox" [(ngModel)]=title name="title" class="form-control" ><br>
+<label>Description:</label><br>
+<textarea rows="3" cols="45"></textarea>
+<label>Priority:</label><br>
+<select [(ngModel)]=priority name="priority" class="form-control">
+  <option>Normal</option>
+  <option>Major</option>
+  <option>Critical</option>
+  </select><br>
+  <label>Status:</label><br>
+  <select [(ngModel)]=status name="status" class="form-control">
+      <option>TODO</option>
+      <option>In Progress</option>
+      <option>Done</option>
+      </select><br>
+<label>Due Date:</label><br>
+<input type="date" [(ngModel)]=date name="date" class="form-control" ><br>
+<label>Parent:</label><br>
+<select>
+  <option *ngFor="let p of parent;let i=index">{{p}}</option>
+  </select><br><br>
+  <!-- <button class="btn btn-primary">Delete</button> -->
+  <button class="btn btn-primary" (click)="cancel()">Cancel</button>
+  <button (click)="create()" class="btn btn-primary">submit</button>
+<!-- </fieldset> -->
+    </form>
+   
+  </div>
+  
+  

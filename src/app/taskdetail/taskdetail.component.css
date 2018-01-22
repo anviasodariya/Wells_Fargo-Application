@@ -1,0 +1,13 @@
+/* .field
+{
+ width:400px;   
+} */
+.taskdetail
+{
+    border: 1px solid black;
+    width:400px;
+    /* float:left; */
+    margin-left:30px;
+    /* background-color: gray; */
+    
+}

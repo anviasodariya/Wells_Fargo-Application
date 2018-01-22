@@ -1,0 +1,27 @@
+<div class="tasklist"><div>Task List<button class="create-btn">Create</button></div>
+<table border="2" class="table table-hover">
+            <thead class="thead-dark">
+<tr>
+      <th>Title</th>
+      <th>Priority</th>
+      <th>Status</th>
+      <th>Due Date</th>
+      <th>Date Created</th>
+      <th>Date Modified</th>
+      </tr>
+     <tr *ngFor="let l of list;let i=index">
+       <td>{{l.title}}</td>
+       <td>{{l.priority}}</td>
+       <td>{{l.status}}</td>
+       <td>{{l.date|date}}</td>
+       <td> {{today|date}}</td>
+       <td>Nov 30,2017</td>
+
+       </tr>
+       </thead>
+      </table>
+     
+      </div>
+      <app-taskdetail (okclick)=adddetailrow($event)></app-taskdetail>
+      
+      
